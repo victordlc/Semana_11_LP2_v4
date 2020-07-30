@@ -19,6 +19,10 @@
                     <td>1.-</td>
                     <td><a href="datospersona.jsp">Personas</a></td>
                 </tr>
+                <tr>
+                    <td>2.-</td>
+                    <td><a href="datosarea.jsp">Area</a></td>
+                </tr>
                 <tr align="center">
                         <td colspan="2"><input type="submit" value="Salir" name="f_salir" /></td>
                 </tr>
