@@ -6,6 +6,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="./styles/styles-tablas.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
         <title>Datos Rol</title>
         
         <%!
@@ -21,6 +23,8 @@
         %>
     </head>
     <body>
+        <div class="container">
+            <div class="tabla">
         <%
             try{
                 ConectaBd bd = new ConectaBd();
@@ -40,7 +44,7 @@
                     if (rs.next()) {
         %>
         
-        <form name="EditarRolForm" action="datosrol.jsp" method="GET">
+        <form class="forma" name="EditarRolForm" action="datosrol.jsp" method="GET">
             <table border="0" align="center">
                 <thead>
                     <tr>
@@ -59,20 +63,20 @@
                     </tr>
                     <tr align="center">
                         <td colspan="2">
-                            <input type="submit" value="Editar" name="f_editar" />
+                            
                             <input type="hidden" name="f_accion" value="M2" />
                             <input type="hidden" name="f_idrol" value="<% out.print(s_idrol); %>" />
                         </td>
                     </tr>
                 </tbody>
             </table>
-
+                        <input class="boton-login" type="submit" value="Editar" name="f_editar" />
         </form>
         <%
                 }
             }else{
         %>
-        <form name="AgregarRolForm" action="datosrol.jsp" method="GET">
+        <form class="forma" name="AgregarRolForm" action="datosrol.jsp" method="GET">
             <table border="0" align="center">
                 <thead>
                     <tr>
@@ -91,18 +95,19 @@
                     </tr>
                     <tr align="center">
                         <td colspan="2">
-                            <input type="submit" value="Agregar" name="f_agregar" />
+                            
                             <input type="hidden" name="f_accion" value="C" />
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <input class="boton-login" type="submit" value="Agregar" name="f_agregar" />
         </form>
         <%
         }
         %>
         
-        <table border="1" cellspacing="0" cellpadding="" align = "center">
+        <table class="centro" border="1" cellspacing="0" cellpadding="" align = "center">
             <thead>
                 <tr>
                     <th colspan="5">Datos Rol</th>
@@ -167,8 +172,8 @@
                         <td><%out.print(num);%></td>
                         <td><%out.print(rs.getString(2));%></td>
                         <td><%out.print(rs.getString(3));%></td>
-                        <td><a href="datosrol.jsp?f_accion=E&f_idrol=<%out.print(ide);%>">Eliminar</a></td>
-                        <td><a href="datosrol.jsp?f_accion=M1&f_idrol=<%out.print(ide);%>">Editar</a></td>
+                        <td><a href="datosrol.jsp?f_accion=E&f_idrol=<%out.print(ide);%>"><img src="./imagenes/eliminar.png" width="40px"></a></td>
+                        <td><a href="datosrol.jsp?f_accion=M1&f_idrol=<%out.print(ide);%>"><img src="./imagenes/editar.png" width="40px"></a></td>
 
                     </tr>                    
                     <%
@@ -178,12 +183,12 @@
             }
         
         %>
-        <tr align = "center">
-        <form name="regresar_rol" action="menu.jsp">
-            <td colspan="5"><input type="submit" value="regresar" name="btn_regresar" /></td>
-        </form>
-        </tr>
         </table>
+        <form name="regresar_rol" action="menu.jsp">
+                    <td colspan="8"><input class="boton-login" type="submit" value="Volver" name="btn_regresar" /></td>
+        </form>
+        </div>
+        </div>
     </body>
 </html>
 

@@ -1,0 +1,111 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-image: url(../imagenes/Fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    height: 100vh;
+}
+
+.container{
+    box-shadow: 0px 0px 15px black;
+    width: 510px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation-name: init;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #434343, #000000);
+
+}
+
+.container .menu{
+    margin: 0px 50px;
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.formulario{
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px;
+}
+
+.menu{
+    align-items: center;
+}
+
+.bx{
+    position: absolute;
+    font-size: 120px;
+    top: 20px;
+    right: 40px;
+    color:rgba(39, 80, 135, 0.66);
+    opacity: 0;
+    animation: load;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+}
+
+.header img {
+  margin-right: 45px;
+  width: 75%;
+}
+
+.boton-login{
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 1000;
+    background: linear-gradient(to right, #000000, #434343);
+    font-family: 'Orbitron', sans-serif;
+}
+
+table tr, td{
+    margin: 20px;
+    padding: 15px;
+}
+
+table tr td a{
+    text-decoration: none;
+    color: #B55858;
+    font-weight: 1000;
+}
+
+@keyframes load{
+    0%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }25%{
+        opacity: 1;
+    }50%{
+        opacity: 0;
+    }75%{
+        opacity: 1;
+    }100%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes init{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}

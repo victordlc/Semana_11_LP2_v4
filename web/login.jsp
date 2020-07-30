@@ -3,31 +3,37 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link type="text/css" rel="stylesheet" href="./styles/styles-login.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+        <title>WatchDogs</title>
     </head>
     <body>
-        <h1 align="center">COVID69</h1>
+        <div class="container">
+            <div class="login">
+                <header class="header animated fadeIn">
+                    <img
+                    src="./imagenes/logo.png"
+                    />
+                </header>
         <form name="f_datos" action="valida.jsp" method="POST">
             <table border="0" align="center" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th colspan="2">Ingrese usuario y clave</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <td>Usuario: </td>
-                        <td><input type="text" name="f_usuario" value="" /></td>
+                        <td style="color: #ffffff !important">Usuario: </td>
+                        <td><input class="input-login" type="text" name="f_usuario" value="" placeholder="Ingrese Usuario"/></td>
                     </tr>
                     <tr>
-                        <td>Clave: </td>
-                        <td><input type="password" name="f_clave" value="" /></td>
+                        <td style="color: #ffffff !important">Clave: </td>
+                        <td><input class="input-login" type="password" name="f_clave" value="" placeholder="Ingrese Contraseña"/></td>
                     </tr>
                     <tr align="center">
-                        <td colspan="2"><input type="submit" value="Ingresar" name="f_ingresar" /></td>
+                        <td colspan="2"><input class="boton-login" type="submit" value="Ingresar" name="f_ingresar" /></td>
                     </tr>
                 </tbody>
             </table>
         </form>
+        </div>
+        </div>
     </body>
+    
 </html>
